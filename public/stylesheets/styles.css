@@ -7,4 +7,19 @@ input.weekend { background-color: #999 }
 input.sp_input { padding-left: 3px; text-align: left; border: 1px solid #666; }
 input.sp_h1_input { padding-left: 3px; text-align: left; border: 1px solid #666; }
 dt { clear: left; float: left; width: 120px; line-height: 20px; }
-dd { line-height: 20px; }
+dd { line-height: 20px; }         
+div#sheet {      
+	width: 52em;
+	margin:2em auto;                 
+}
+div#about {                
+	width: 52em;
+	font-family: verdana, serif;
+	background-color: lightyellow;
+	border: 2px dotted;
+	padding: 1em;                    
+	padding-top: 0px;
+	padding-bottom: 0px;
+	line-height: 1.3em;     
+	margin: 2em auto;
+}

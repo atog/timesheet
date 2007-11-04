@@ -1,4 +1,35 @@
 titles = ['Week','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+
+div ({ :id => 'about' }) do
+	p do
+	"""        
+10to1-timesheet is a simple and easy solution for the mundane task of filling out timesheets every month. You now have a clean, fast and easy way to get a paper to have signed by your customer.
+	"""
+	end
+	p do
+	"""
+How do you use it? Simple: <b>fill out the form and print it</b>.
+"""
+  end
+  p do
+  """
+By default, you get the current month. If you want another month or year, add the month, or the month and year, to the url, separated by dashes. For example, <a href='/07'>http://timesheet.10to1.be/07</a> gives you the timesheet for July of this year, <a href='/07/1978'>http://timesheet.10to1.be/07/1978</a> gives you the timesheet for July 1978.
+  """
+  end
+  p do
+	"""
+	There are no strings attached. We don't store any of the information you fill out here, and you can use this for free. Enjoy!
+	"""
+  end   
+
+	p({:style => 'font-style: italic; font-size: .9em;'}) do
+	"""
+This text is not shown on the printout. 10to1-timesheet is brought to you by <a href='http://www.10to1.be'>10to1</a>.
+  """
+	end
+end
+                      
+div({:id => 'sheet'}) do
 dl do
   dt { label 'Company' }
   dd { input({ :type => 'text', :size => 30, :class => 'sp_h1_input' }) }
@@ -49,4 +80,5 @@ br
 p do
 	span({ :style => 'margin-left: 50px;'}) { text 'Signature Consultant' }
 	span({ :style => 'margin-left: 200px;'}) { text 'Signature Customer' }
+end
 end

@@ -23,7 +23,7 @@ table({ :border => 1, :cellspacing => 0 }) do
 			td { text line[0]  }
 			1.upto(line.length-1) do |i|
 				td do
-				  options = { :type => 'text', :size => 10, :maxlength => 2 }
+				  options = { :type => 'text', :size => 10, :maxlength => 5 }
 					unless line[i]
 						options[:disabled] = true	
 					end
@@ -44,10 +44,6 @@ dl do
 	dt { text 'Total number of days' }
 	dd { input({ :type => 'text', :size => 10, :class => 'sp_input' }) }
 end
-#dl do
-#  dt { label 'Custom information' }
-#  dd { textarea({ :rows => 5, :cols => 50, :class => 'sp_textarea' }) }
-#end	
 br
 br
 p do

@@ -1,0 +1,10 @@
+body { font-family: helvetica, serif;	font-size: 76%;	color: #666; }
+h1 { font-size: 1.3em; }
+table {	font-size: 0.9em; }
+th { color: #fff; background-color: #666; }
+input { text-align: center; border: 0; font-size: 0.9em; }
+input.weekend { background-color: #999 }								
+input.sp_input { padding-left: 3px; text-align: left; border: 1px solid #666; }
+input.sp_h1_input { padding-left: 3px; text-align: left; border: 1px solid #666; }
+dt { clear: left; float: left; width: 120px; line-height: 20px; }
+dd { line-height: 20px; }

@@ -1,0 +1,12 @@
+body { font-family: helvetica, serif;	font-size: 76%;	color: #666; }
+h1 { font-size: 1.3em; }
+table {	font-size: 1em; }
+th { color: #fff; background-color: #666; }
+input { text-align: center; border: 0; font-size: 0.9em; }
+input.weekend { background-color: #999 }								
+input.sp_input { padding: 2px 0; text-align: left; border: 0; font-size: 1.1em; }
+input.sp_h1_input { padding: 2px 0; text-align: left; border: 0; font-size: 1.3em; font-weight: bold; margin-left: -40px }
+textarea.sp_textarea { padding: 2px 0; text-align: left; border: 0; font-size: 1em; margin-left: -40px; font-family: helvetica, serif; }
+dt { clear:left; float: left; width: 120px; line-height: 20px; }
+dd { line-height: 20px; }
+label { display: none; }

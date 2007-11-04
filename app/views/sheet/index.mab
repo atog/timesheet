@@ -1,0 +1,56 @@
+titles = ['Week','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+dl do
+  dt { label 'Company' }
+  dd { input({ :type => 'text', :size => 30, :class => 'sp_h1_input' }) }
+end
+h1 "Timesheet #{@title_date.strftime('%B %Y')}"
+br
+dl do
+	dt { text 'Customer' }
+	dd { input({ :type => 'text', :size => 30, :class => 'sp_input' }) }
+	dt { text 'Consultant' }
+	dd { input({ :type => 'text', :size => 30, :class => 'sp_input' }) }			
+end
+br			
+table({ :border => 1, :cellspacing => 0 }) do
+	tr do
+		titles.each do |title|
+			th { text title }
+		end
+	end
+	@arr.each do |line|
+		tr do
+			td { text line[0]  }
+			1.upto(line.length-1) do |i|
+				td do
+				  options = { :type => 'text', :size => 10, :maxlength => 2 }
+					unless line[i]
+						options[:disabled] = true	
+					end
+					unless i < 6
+					  options[:class] = 'weekend'
+					end
+					# Default: worked 8 hours
+					if (i < 6) and (line[i])
+					  options[:value] = 8
+					end
+					input(options)
+				end
+			end
+		end
+	end
+end
+dl do
+	dt { text 'Total number of days' }
+	dd { input({ :type => 'text', :size => 10, :class => 'sp_input' }) }
+end
+#dl do
+#  dt { label 'Custom information' }
+#  dd { textarea({ :rows => 5, :cols => 50, :class => 'sp_textarea' }) }
+#end	
+br
+br
+p do
+	span({ :style => 'margin-left: 50px;'}) { text 'Signature Consultant' }
+	span({ :style => 'margin-left: 200px;'}) { text 'Signature Customer' }
+end

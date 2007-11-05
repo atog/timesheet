@@ -13,7 +13,7 @@ How do you use it? Simple: <b>fill out the form and print it</b>.
   end
   p do
   """
-By default, you get the current month. If you want another month or year, add the month, or the month and year, to the url, separated by dashes. For example, <a href='/07'>http://timesheet.10to1.be/07</a> gives you the timesheet for July of this year, <a href='/07/1978'>http://timesheet.10to1.be/07/1978</a> gives you the timesheet for July 1978.
+By default, you get the current month. If you want another month or year, add the month, or the month and year, to the url, separated by slashes. For example, <a href='/07'>http://timesheet.10to1.be/07</a> gives you the timesheet for July of this year, <a href='/07/1978'>http://timesheet.10to1.be/07/1978</a> gives you the timesheet for July 1978.
   """
   end
   p do

@@ -16,7 +16,7 @@ div#about {
 	width: 52em;
 	font-family: verdana, serif;
 	background-color: lightyellow;
-	border: 2px dotted;
+	border: thin solid;
 	padding: 1em;                    
 	padding-top: 0px;
 	padding-bottom: 0px;

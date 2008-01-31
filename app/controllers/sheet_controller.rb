@@ -17,16 +17,21 @@ class SheetController < ApplicationController
   	dt = DateTime.now
   	y = dt.year if y.nil?
   	m = dt.month if m.nil?
-  	t = DateTime.new(y.to_i, m.to_i, 1)
-  	a = DateTime.new(t.year, t.month, 1)
+  	t = Date.new(y.to_i, m.to_i, 1)
+  	a = Date.new(t.year, t.month, 1)
+  	puts t
+  	stop_array = (t.to_time + 1.month).to_date
+  	puts stop_array
 
   	# go to Monday
   	until a.wday == 1 do
   		a-=1
+  		puts a
   	end
   	# build the week array
   	arr = Array.new
-    until a.mon > t.mon || (a.mon == 1 && t.mon == 12) do
+    # until a.mon > t.mon || (a.mon == 1 && t.mon == 12) do
+    until a > stop_array do
   		arra = Array.new
   		arra << "#{a.strftime(format)} - #{(a+6).strftime(format)}"
   		7.times do |i|
